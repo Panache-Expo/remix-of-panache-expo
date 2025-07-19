@@ -1,0 +1,47 @@
+import { Button } from "@/components/ui/button";
+import heroImage from "@/assets/hero-beauty.jpg";
+
+export const Hero = () => {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={heroImage} 
+          alt="Panache Expo Beauty Event" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/60 to-rose-gold/70"></div>
+      </div>
+      
+      {/* Content */}
+      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-8 animate-fade-in">
+          Panache <span className="text-rose-gold">Expo</span>
+        </h1>
+        
+        <p className="text-xl md:text-2xl lg:text-3xl text-primary-foreground/90 mb-6 font-light leading-relaxed animate-fade-in">
+          Celebrating Beauty, Fashion and Skincare through 
+        </p>
+        
+        <p className="text-lg md:text-xl text-primary-foreground/80 mb-12 animate-fade-in">
+          Workshops • Pageants • Prestigious Awards
+        </p>
+        
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-scale-in">
+          <Button variant="hero" size="lg">
+            Explore Workshops
+          </Button>
+          <Button variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+            Learn More
+          </Button>
+        </div>
+      </div>
+      
+      {/* Floating Elements */}
+      <div className="absolute top-20 left-10 w-3 h-3 bg-rose-gold rounded-full animate-float opacity-60"></div>
+      <div className="absolute bottom-32 right-16 w-2 h-2 bg-primary-foreground rounded-full animate-float opacity-40" style={{animationDelay: '1s'}}></div>
+      <div className="absolute top-1/3 right-8 w-4 h-4 bg-rose-gold/60 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
+    </section>
+  );
+};
