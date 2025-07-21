@@ -4,7 +4,7 @@ export const Gallery = () => {
   const galleryItems = [
     {
       type: "image",
-      src: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop",
+      src: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&h=400&fit=crop",
       alt: "Makeup workshop in progress"
     },
     {
@@ -14,22 +14,22 @@ export const Gallery = () => {
     },
     {
       type: "image",
-      src: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop", 
+      src: "", 
       alt: "Nail art workshop"
     },
     {
       type: "image",
-      src: "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=600&h=400&fit=crop",
+      src: "",
       alt: "Beauty pageant event"
     },
     {
       type: "image",
-      src: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&h=400&fit=crop",
+      src: "",
       alt: "Lash extension training"
     },
     {
       type: "image",
-      src: "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&h=400&fit=crop",
+      src: "",
       alt: "Braiding workshop demonstration"
     }
   ];

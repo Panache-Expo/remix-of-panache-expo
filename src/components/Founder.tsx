@@ -37,7 +37,7 @@ export const Founder = () => {
                   rel="noopener noreferrer"
                   className="text-rose-gold hover:text-primary transition-colors font-medium"
                 >
-                  @ekiewalters
+                  @ekie_walters
                 </a>
                 <ExternalLink className="w-4 h-4 text-rose-gold" />
               </div>

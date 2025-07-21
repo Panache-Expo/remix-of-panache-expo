@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-beauty.jpg";
+import { Link } from "react-router-dom";
 
 declare module "*.jpg" {
   const value: string;
@@ -33,13 +34,12 @@ export const Hero = () => {
           Workshops • Pageants • Prestigious Awards
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-scale-in">
-          <Button variant="hero" size="lg">
-            Explore Workshops
-          </Button>
-          <Button variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-            Learn More
-          </Button>
+          <Link to="/workshops">
+            <Button variant="hero" size="lg">
+              Explore Workshops
+            </Button>
+          </Link>
+          >
         </div>
       </div>
       
