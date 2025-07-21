@@ -1,6 +1,11 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-beauty.jpg";
 
+declare module "*.jpg" {
+  const value: string;
+  export default value;
+}
+
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">

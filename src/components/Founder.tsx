@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Instagram, ExternalLink } from "lucide-react";
+import FounderImage from "@/assets/Founder.png"; // Ensure you have the image in your assets
 
 export const Founder = () => {
   return (
@@ -10,7 +11,7 @@ export const Founder = () => {
           <div className="relative">
             <div className="aspect-square rounded-3xl overflow-hidden shadow-elegant">
               <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=600&fit=crop"
+                src={FounderImage}
                 alt="Ekie Walters - Founder of Panache Expo"
                 className="w-full h-full object-cover"
               />
