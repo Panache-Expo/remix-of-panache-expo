@@ -5,8 +5,80 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Footer } from "@/components/Footer";
+import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 export const RegisterPage = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [selectedWorkshop, setSelectedWorkshop] = useState("");
+  const [selectedExperience, setSelectedExperience] = useState("");
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
+  const [newsletterSubscription, setNewsletterSubscription] = useState(false);
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    if (!selectedWorkshop) {
+      toast({
+        title: "Please select a workshop",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (!agreedToTerms) {
+      toast({
+        title: "Please agree to the terms and conditions",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      first_name: formData.get('firstName') as string,
+      last_name: formData.get('lastName') as string,
+      email: formData.get('email') as string,
+      phone: formData.get('phone') as string,
+      workshop: selectedWorkshop,
+      experience_level: selectedExperience || null,
+      agreed_to_terms: agreedToTerms,
+      newsletter_subscription: newsletterSubscription,
+    };
+
+    try {
+      const { error } = await supabase
+        .from('workshop_registrations')
+        .insert([data]);
+
+      if (error) throw error;
+
+      toast({
+        title: "Registration successful!",
+        description: "You're registered for the workshop. We'll send you details soon.",
+      });
+
+      e.currentTarget.reset();
+      setSelectedWorkshop("");
+      setSelectedExperience("");
+      setAgreedToTerms(false);
+      setNewsletterSubscription(false);
+    } catch (error) {
+      console.error('Error submitting registration:', error);
+      toast({
+        title: "Registration failed",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -23,31 +95,31 @@ export const RegisterPage = () => {
           </div>
           
           <div className="bg-card rounded-2xl p-8 shadow-elegant">
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <Label htmlFor="firstName">First Name *</Label>
-                  <Input id="firstName" className="mt-2" placeholder="Your first name" required />
+                  <Input id="firstName" name="firstName" className="mt-2" placeholder="Your first name" required />
                 </div>
                 <div>
                   <Label htmlFor="lastName">Last Name *</Label>
-                  <Input id="lastName" className="mt-2" placeholder="Your last name" required />
+                  <Input id="lastName" name="lastName" className="mt-2" placeholder="Your last name" required />
                 </div>
               </div>
               
               <div>
                 <Label htmlFor="email">Email Address *</Label>
-                <Input id="email" type="email" className="mt-2" placeholder="your.email@example.com" required />
+                <Input id="email" name="email" type="email" className="mt-2" placeholder="your.email@example.com" required />
               </div>
               
               <div>
                 <Label htmlFor="phone">Phone Number *</Label>
-                <Input id="phone" type="tel" className="mt-2" placeholder="+1 (555) 123-4567" required />
+                <Input id="phone" name="phone" type="tel" className="mt-2" placeholder="+1 (555) 123-4567" required />
               </div>
               
               <div>
                 <Label htmlFor="workshop">Select Workshop *</Label>
-                <Select>
+                <Select value={selectedWorkshop} onValueChange={setSelectedWorkshop}>
                   <SelectTrigger className="mt-2">
                     <SelectValue placeholder="Choose your workshop" />
                   </SelectTrigger>
@@ -64,7 +136,7 @@ export const RegisterPage = () => {
               
               <div>
                 <Label htmlFor="experience">Experience Level</Label>
-                <Select>
+                <Select value={selectedExperience} onValueChange={setSelectedExperience}>
                   <SelectTrigger className="mt-2">
                     <SelectValue placeholder="Select your experience level" />
                   </SelectTrigger>
@@ -78,21 +150,29 @@ export const RegisterPage = () => {
               </div>
               
               <div className="flex items-center space-x-2">
-                <Checkbox id="terms" />
+                <Checkbox 
+                  id="terms" 
+                  checked={agreedToTerms} 
+                  onCheckedChange={(checked) => setAgreedToTerms(checked === true)} 
+                />
                 <Label htmlFor="terms" className="text-sm">
                   I agree to the terms and conditions and privacy policy
                 </Label>
               </div>
               
               <div className="flex items-center space-x-2">
-                <Checkbox id="newsletter" />
+                <Checkbox 
+                  id="newsletter" 
+                  checked={newsletterSubscription} 
+                  onCheckedChange={(checked) => setNewsletterSubscription(checked === true)} 
+                />
                 <Label htmlFor="newsletter" className="text-sm">
                   Subscribe to our newsletter for updates and exclusive offers
                 </Label>
               </div>
               
-              <Button type="submit" className="w-full" size="lg">
-                Register for Workshop
+              <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
+                {isSubmitting ? "Registering..." : "Register for Workshop"}
               </Button>
             </form>
           </div>

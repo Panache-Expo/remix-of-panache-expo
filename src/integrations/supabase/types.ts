@@ -14,7 +14,75 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      contact_submissions: {
+        Row: {
+          created_at: string
+          email: string
+          first_name: string
+          id: string
+          last_name: string
+          message: string
+          subject: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          first_name: string
+          id?: string
+          last_name: string
+          message: string
+          subject: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          first_name?: string
+          id?: string
+          last_name?: string
+          message?: string
+          subject?: string
+        }
+        Relationships: []
+      }
+      workshop_registrations: {
+        Row: {
+          agreed_to_terms: boolean
+          created_at: string
+          email: string
+          experience_level: string | null
+          first_name: string
+          id: string
+          last_name: string
+          newsletter_subscription: boolean
+          phone: string
+          workshop: string
+        }
+        Insert: {
+          agreed_to_terms?: boolean
+          created_at?: string
+          email: string
+          experience_level?: string | null
+          first_name: string
+          id?: string
+          last_name: string
+          newsletter_subscription?: boolean
+          phone: string
+          workshop: string
+        }
+        Update: {
+          agreed_to_terms?: boolean
+          created_at?: string
+          email?: string
+          experience_level?: string | null
+          first_name?: string
+          id?: string
+          last_name?: string
+          newsletter_subscription?: boolean
+          phone?: string
+          workshop?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
