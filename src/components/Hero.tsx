@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-beauty.png";
 import { Link } from "react-router-dom";
-
+import logoImage from "@/assets/Panache Expo logo-01.png";
 
 export const Hero = () => {
   return (
@@ -17,24 +17,24 @@ export const Hero = () => {
       </div>
       
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-8 animate-fade-in">
-          Panache <span className="text-rose-gold">Expo</span>
+      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto flex flex-col items-center gap-3">
+        <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground animate-fade-in mb-2">
+          <img src={logoImage} alt="Panache Expo" className="mx-auto mb-5 max-w-[320px] md:max-w-[500px]" />
         </h1>
         
-        <p className="text-xl md:text-2xl lg:text-3xl text-primary-foreground/90 mb-6 font-light leading-relaxed animate-fade-in">
+        <p className="text-xl md:text-2xl lg:text-3xl text-primary-foreground/90 font-light leading-relaxed animate-fade-in mb-1">
           Celebrating Beauty, Fashion and Skincare through 
         </p>
         
-        <p className="text-lg md:text-xl text-primary-foreground/80 mb-12 animate-fade-in">
+        <p className="text-lg md:text-xl text-primary-foreground/80 animate-fade-in mb-4">
           Workshops • Pageants • Prestigious Awards
         </p>
         
-          <Link to="/workshops">
-            <Button variant="hero" size="lg">
-              Explore Workshops
-            </Button>
-          </Link>
+        <Link to="/workshops">
+          <Button variant="hero" size="lg">
+            Explore Workshops
+          </Button>
+        </Link>
       </div>
       
       {/* Floating Elements */}
