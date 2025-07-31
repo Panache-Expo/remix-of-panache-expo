@@ -3,7 +3,7 @@ import StylingImage from "@/assets/HairStyling.jpg";
 import NailImage from "@/assets/NailArt.jpg";
 import WigImage from "@/assets/WigInstall.jpg";
 import LashImage from "@/assets/Lash.jpg";
-import BraidingImage from "@/assets/Braid.jpg";
+import BraidingImage from "@/assets/BraidingWorkshop.jpeg";
 export const Gallery = () => {
   const galleryItems = [
     {

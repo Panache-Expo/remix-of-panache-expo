@@ -19,7 +19,7 @@ export const Contact = () => {
               <span className="text-2xl">📧</span>
             </div>
             <h3 className="font-semibold text-primary-foreground mb-2">Email Us</h3>
-            <p className="text-primary-foreground/80 text-sm">info@panacheexpo.org</p>
+            <p className="text-primary-foreground/80 text-sm"> thepanacheexpo@gmail.com </p>
           </div>
           
           <div className="text-center">
@@ -27,7 +27,7 @@ export const Contact = () => {
               <span className="text-2xl">📱</span>
             </div>
             <h3 className="font-semibold text-primary-foreground mb-2">Call Us</h3>
-            <p className="text-primary-foreground/80 text-sm">+1 (555) 123-4567</p>
+            <p className="text-primary-foreground/80 text-sm">+237 673 594 931</p>
           </div>
           
           <div className="text-center">

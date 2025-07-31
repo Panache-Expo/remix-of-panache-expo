@@ -10,7 +10,9 @@ export const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="md:col-span-1">
-            <img src={logoImage} alt="Panache Expo" className="h-16 mb-4" />
+            <h3 className="font-display text-2xl font-bold mb-4">
+              Panache <span className="text-rose-gold">Expo</span>
+            </h3>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               Celebrating Beauty, Fashion and Skincare through Workshops, Pageants and Prestigious Awards
             </p>
@@ -54,11 +56,11 @@ export const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center text-sm text-primary-foreground/80">
                 <Mail className="w-4 h-4 mr-3" />
-                info@panacheexpo.org
+                thepanacheexpo@gmail.com 
               </li>
               <li className="flex items-center text-sm text-primary-foreground/80">
                 <Phone className="w-4 h-4 mr-3" />
-                +237 123 456 789
+                +237 673 594 931
               </li>
               <li className="flex items-center text-sm text-primary-foreground/80">
                 <MapPin className="w-4 h-4 mr-3" />
@@ -80,7 +82,7 @@ export const Footer = () => {
                 <Instagram className="w-5 h-5" />
               </a>
               <a 
-                href="https://facebook.com/panacheexpo" 
+                href="https://www.facebook.com/share/1BvgGo9hXL/?mibextid=wwXIfr" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
@@ -88,7 +90,7 @@ export const Footer = () => {
                 <Facebook className="w-5 h-5" />
               </a>
               <a 
-                href="https://youtube.com/@panacheexpo" 
+                href="https://youtube.com/@panacheexpo?si=a39zrVH0tJojj38N" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"

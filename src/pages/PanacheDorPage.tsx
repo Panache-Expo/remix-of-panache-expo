@@ -1,6 +1,8 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
+import MissPanacheImage from "@/assets/MissPanache.jpeg";
+import WinnersListImage from "@/assets/PanacheDorWinners.jpeg";
 
 const PanacheDorPage = () => {
   return (
@@ -34,16 +36,14 @@ const PanacheDorPage = () => {
           <Card className="max-w-4xl mx-auto">
             <CardContent className="p-8">
               <div className="aspect-video bg-muted rounded-lg flex items-center justify-center mb-6">
-                <p className="text-muted-foreground text-lg">
-                  Miss Panache Image will be added here
-                </p>
+                <img src={MissPanacheImage} alt = "Miss Panache" />
               </div>
               <div className="text-center">
                 <h3 className="font-display text-2xl font-semibold text-primary mb-2">
                   Current Miss Panache
                 </h3>
-                <p className="text-muted-foreground">
-                  Details about the current Miss Panache will be displayed here
+                <p className="text-muted-foreground mb-4">
+                  Our current Miss Panache is a symbol of beauty and empowerment, inspiring others to embrace their uniqueness.
                 </p>
               </div>
             </CardContent>
@@ -66,9 +66,7 @@ const PanacheDorPage = () => {
           <Card className="max-w-4xl mx-auto">
             <CardContent className="p-8">
               <div className="aspect-video bg-muted rounded-lg flex items-center justify-center mb-6">
-                <p className="text-muted-foreground text-lg">
-                  List of Winners Image will be added here
-                </p>
+                <img src={WinnersListImage} alt="Panache D'or Winners" />
               </div>
               <div className="text-center">
                 <h3 className="font-display text-2xl font-semibold text-primary mb-4">
@@ -77,17 +75,7 @@ const PanacheDorPage = () => {
                 <p className="text-muted-foreground mb-6">
                   A comprehensive list of all our distinguished winners will be displayed here
                 </p>
-                <div className="grid md:grid-cols-2 gap-4 text-left">
-                  <div className="p-4 bg-background rounded-lg">
-                    <h4 className="font-semibold text-primary mb-2">2024 Winners</h4>
-                    <p className="text-sm text-muted-foreground">Winners will be listed here</p>
-                  </div>
-                  <div className="p-4 bg-background rounded-lg">
-                    <h4 className="font-semibold text-primary mb-2">2023 Winners</h4>
-                    <p className="text-sm text-muted-foreground">Winners will be listed here</p>
-                  </div>
                 </div>
-              </div>
             </CardContent>
           </Card>
         </div>

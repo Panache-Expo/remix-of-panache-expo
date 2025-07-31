@@ -73,7 +73,7 @@ export const ContactPage = () => {
                   <span className="text-2xl">📧</span>
                 </div>
                 <h3 className="font-semibold text-primary-foreground mb-2">Email Us</h3>
-                <p className="text-primary-foreground/80">info@panacheexpo.org</p>
+                <p className="text-primary-foreground/80"> thepanacheexpo@gmail.com</p>
               </div>
               
               <div className="text-center md:text-left">
@@ -81,7 +81,7 @@ export const ContactPage = () => {
                   <span className="text-2xl">📱</span>
                 </div>
                 <h3 className="font-semibold text-primary-foreground mb-2">Call Us</h3>
-                <p className="text-primary-foreground/80">+1 (555) 123-4567</p>
+                <p className="text-primary-foreground/80"> +237 673 594 931</p>
               </div>
               
               <div className="text-center md:text-left">
