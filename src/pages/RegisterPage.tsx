@@ -6,8 +6,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { Footer } from "@/components/Footer";
 import { useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 export const RegisterPage = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -51,27 +51,38 @@ export const RegisterPage = () => {
     };
 
     try {
-      const { error } = await supabase
+      const { data: result, error } = await supabase
         .from('workshop_registrations')
-        .insert([data]);
+        .insert([data])
+        .select();
 
-      if (error) throw error;
+      if (error) {
+        console.error('Supabase error:', error);
+        throw new Error(error.message || 'Failed to submit registration');
+      }
 
-      toast({
-        title: "Registration successful!",
-        description: "You're registered for the workshop. We'll send you details soon.",
-      });
+      if (result && result.length > 0) {
+        toast({
+          title: "Registration successful!",
+          description: "You're registered for the workshop. We'll send you details soon.",
+        });
 
-      e.currentTarget.reset();
-      setSelectedWorkshop("");
-      setSelectedExperience("");
-      setAgreedToTerms(false);
-      setNewsletterSubscription(false);
+        if (e.currentTarget instanceof HTMLFormElement) {
+          e.currentTarget.reset();
+        }
+        setSelectedWorkshop("");
+        setSelectedExperience("");
+        setAgreedToTerms(false);
+        setNewsletterSubscription(false);
+      } else {
+        throw new Error('No confirmation received from database');
+      }
     } catch (error) {
       console.error('Error submitting registration:', error);
+      const errorMsg = error instanceof Error ? error.message : 'Please try again later';
       toast({
         title: "Registration failed",
-        description: "Please try again later.",
+        description: errorMsg,
         variant: "destructive",
       });
     } finally {
