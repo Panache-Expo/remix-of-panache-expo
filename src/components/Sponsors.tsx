@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Handshake, Building2, Heart } from "lucide-react";
 
@@ -75,9 +76,11 @@ export const Sponsors = ({ variant = "panache" }: SponsorsProps) => {
           <p className="text-muted-foreground mb-6">
             Interested in becoming a sponsor or partner?
           </p>
-          <Button variant="rose" size="lg">
-            Become a Partner
-          </Button>
+          <Link to="/contact"onClick={() => setIsMobileMenuOpen(false)}>
+            <Button variant="rose" size="lg">
+                Become a Partner 
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

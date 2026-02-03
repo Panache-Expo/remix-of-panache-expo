@@ -25,44 +25,45 @@ export const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <Link to="/" className="text-muted-foreground hover:text-primary transition-colors" title="Foundation Home">
-            <Home className="w-5 h-5" />
-          </Link>
-          <Link to="/panache-expo" className="font-display text-2xl font-bold text-primary">
-            Panache <span className="text-rose-gold">Expo</span> 
+          <Link to="/" className="font-display text-2xl font-bold text-primary">
+            Panache Expo <span className="text-rose-gold">Foundation</span>
           </Link>
         </div>
         
         <nav className="hidden md:flex items-center gap-6">
           {/* Panache Expo Dropdown */}
-          <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center gap-1 text-foreground hover:text-primary transition-colors">
+          <div className="flex items-center gap-1">
+            <Link to="/panache-expo" className="text-foreground hover:text-primary transition-colors">
               Panache Expo
-              <ChevronDown className="w-4 h-4" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-background border border-border shadow-elegant z-50">
-              <DropdownMenuItem asChild>
-                <Link to="/panache-expo" className="cursor-pointer">
-                  6th Edition 2026
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link to="/panache-360" className="cursor-pointer">
-                  Panache 360 Beauty
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link to="/workshops" className="cursor-pointer">
-                  Workshops
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link to="/panache-dor" className="cursor-pointer">
-                  Panache D'or Winners
-                </Link>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+            </Link>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-foreground hover:text-primary transition-colors p-1">
+                <ChevronDown className="w-4 h-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-background border border-border shadow-elegant z-50">
+                <DropdownMenuItem asChild>
+                  <Link to="/panache-expo" className="cursor-pointer">
+                    6th Edition 2026
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/panache-360" className="cursor-pointer">
+                    Panache 360 Beauty
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/workshops" className="cursor-pointer">
+                    Workshops
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/panache-dor" className="cursor-pointer">
+                    Panache D'or Winners
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
 
           <Link to="/cyes" className="text-foreground hover:text-primary transition-colors">
             CYES
