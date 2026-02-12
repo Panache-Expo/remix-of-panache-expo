@@ -5,31 +5,35 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Users, Lightbulb, Target, Award, Mic, Calendar, MapPin } from "lucide-react";
+import speaker1 from "@/assets/speaker1.jpeg";
+import speaker2 from "@/assets/speaker2.jpeg";
+import speaker3 from "@/assets/speaker3.jpeg";
+import speaker4 from "@/assets/speaker4.jpeg";
 
 const speakers = [
   {
     name: "Speaker Name",
     role: "Entrepreneur & CEO",
     topic: "Building Sustainable Businesses in Cameroon",
-    image: null
+    image: speaker1
   },
   {
     name: "Speaker Name",
     role: "Tech Innovator",
     topic: "Digital Transformation for Youth Entrepreneurs",
-    image: null
+    image: speaker2
   },
   {
     name: "Speaker Name",
     role: "Investment Expert",
     topic: "Securing Funding for Your Startup",
-    image: null
+    image: speaker3
   },
   {
     name: "Speaker Name",
     role: "Business Mentor",
     topic: "From Idea to Impact: Your Entrepreneurial Journey",
-    image: null
+    image: speaker4
   }
 ];
 
@@ -204,8 +208,16 @@ const CYESPage = () => {
             {speakers.map((speaker, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="p-0">
-                  <div className="aspect-square bg-muted flex items-center justify-center">
-                    <Mic className="w-16 h-16 text-muted-foreground/30" />
+                  <div className="aspect-square bg-muted flex items-center justify-center overflow-hidden">
+                    {speaker.image ? (
+                      <img 
+                        src={speaker.image} 
+                        alt={speaker.name}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <Mic className="w-16 h-16 text-muted-foreground/30" />
+                    )}
                   </div>
                   <div className="p-6">
                     <h3 className="font-display text-lg font-semibold text-primary mb-1">

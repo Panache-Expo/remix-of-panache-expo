@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X, ChevronDown, Home } from "lucide-react";
+import foundationLogo from "@/assets/foundationlogo.jpeg";
 import {
   DropdownMenu,
   DropdownMenuContent,
