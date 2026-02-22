@@ -1,8 +1,8 @@
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Footer } from "@/components/Footer";
 import { useState } from "react";
@@ -11,22 +11,12 @@ import { useToast } from "@/hooks/use-toast";
 const TARGET_EMAIL = "dhruvroshan10@gmail.com";
 
 export const RegisterPage = () => {
-  const [selectedWorkshop, setSelectedWorkshop] = useState("");
-  const [selectedExperience, setSelectedExperience] = useState("");
   const [agreedToTerms, setAgreedToTerms] = useState(false);
   const [newsletterSubscription, setNewsletterSubscription] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
-    if (!selectedWorkshop) {
-      toast({
-        title: "Please select a workshop",
-        variant: "destructive",
-      });
-      return;
-    }
 
     if (!agreedToTerms) {
       toast({
@@ -41,15 +31,17 @@ export const RegisterPage = () => {
     const lastName = formData.get('lastName') as string;
     const email = formData.get('email') as string;
     const phone = formData.get('phone') as string;
+    const registeringFor = formData.get('registeringFor') as string;
+    const details = formData.get('details') as string;
 
-    const subject = encodeURIComponent(`Workshop Registration - ${selectedWorkshop}`);
+    const subject = encodeURIComponent(`Registration - ${registeringFor}`);
     const body = encodeURIComponent(
-      `WORKSHOP REGISTRATION\n\n` +
+      `REGISTRATION\n\n` +
       `Name: ${firstName} ${lastName}\n` +
       `Email: ${email}\n` +
       `Phone: ${phone}\n` +
-      `Workshop: ${selectedWorkshop}\n` +
-      `Experience Level: ${selectedExperience || "Not specified"}\n` +
+      `Registering For: ${registeringFor}\n` +
+      `Additional Details: ${details || "None"}\n` +
       `Newsletter: ${newsletterSubscription ? "Yes" : "No"}\n`
     );
 
@@ -63,12 +55,9 @@ export const RegisterPage = () => {
     if (e.currentTarget instanceof HTMLFormElement) {
       e.currentTarget.reset();
     }
-    setSelectedWorkshop("");
-    setSelectedExperience("");
     setAgreedToTerms(false);
     setNewsletterSubscription(false);
   };
-
   return (
     <div className="min-h-screen">
       <Header />
@@ -77,10 +66,10 @@ export const RegisterPage = () => {
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="font-display text-4xl md:text-5xl font-bold text-primary mb-6">
-              Register for <span className="text-rose-gold">Workshops</span>
+              Register for <span className="text-rose-gold">an Event</span>
             </h1>
             <p className="text-lg text-muted-foreground">
-              Join our exclusive beauty workshops and elevate your skills with industry experts.
+              Join our exclusive events, workshops, and programs. Register below and we'll be in touch.
             </p>
           </div>
           
@@ -104,39 +93,17 @@ export const RegisterPage = () => {
               
               <div>
                 <Label htmlFor="phone">Phone Number *</Label>
-                <Input id="phone" name="phone" type="tel" className="mt-2" placeholder="+1 (555) 123-4567" required />
+                <Input id="phone" name="phone" type="tel" className="mt-2" placeholder="+237 6XX XXX XXX" required />
               </div>
-              
+
               <div>
-                <Label htmlFor="workshop">Select Workshop *</Label>
-                <Select value={selectedWorkshop} onValueChange={setSelectedWorkshop}>
-                  <SelectTrigger className="mt-2">
-                    <SelectValue placeholder="Choose your workshop" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="barber">Professional Barber Techniques</SelectItem>
-                    <SelectItem value="nails">Advanced Nail Technology</SelectItem>
-                    <SelectItem value="wigs">Wig Installation & Styling</SelectItem>
-                    <SelectItem value="lashes">Lash Extension Mastery</SelectItem>
-                    <SelectItem value="makeup">Professional Makeup Artistry</SelectItem>
-                    <SelectItem value="braiding">Creative Braiding Techniques</SelectItem>
-                  </SelectContent>
-                </Select>
+                <Label htmlFor="registeringFor">What are you registering for? *</Label>
+                <Input id="registeringFor" name="registeringFor" className="mt-2" placeholder="e.g. Panache Expo, CYES Summit, Braiding Workshop..." required />
               </div>
-              
+
               <div>
-                <Label htmlFor="experience">Experience Level</Label>
-                <Select value={selectedExperience} onValueChange={setSelectedExperience}>
-                  <SelectTrigger className="mt-2">
-                    <SelectValue placeholder="Select your experience level" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="beginner">Beginner</SelectItem>
-                    <SelectItem value="intermediate">Intermediate</SelectItem>
-                    <SelectItem value="advanced">Advanced</SelectItem>
-                    <SelectItem value="professional">Professional</SelectItem>
-                  </SelectContent>
-                </Select>
+                <Label htmlFor="details">Additional Details</Label>
+                <Textarea id="details" name="details" className="mt-2" rows={3} placeholder="Any additional information you'd like to share..." />
               </div>
               
               <div className="flex items-center space-x-2">
@@ -162,7 +129,7 @@ export const RegisterPage = () => {
               </div>
               
               <Button type="submit" className="w-full" size="lg">
-                Register for Workshop
+                Register
               </Button>
             </form>
           </div>
