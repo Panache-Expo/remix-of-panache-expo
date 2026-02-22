@@ -55,11 +55,6 @@ export const Header = () => {
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/workshops" className="cursor-pointer">
-                    Workshops
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
                   <Link to="/panache-dor" className="cursor-pointer">
                     Panache D'or Winners
                   </Link>
@@ -83,11 +78,6 @@ export const Header = () => {
                 <ChevronDown className="w-4 h-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background border border-border shadow-elegant z-50">
-                <DropdownMenuItem asChild>
-                  <Link to="/cyes" className="cursor-pointer">
-                    Summit & Awards
-                  </Link>
-                </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link to="/cyes/awards" className="cursor-pointer">
                     CYESCD Awards

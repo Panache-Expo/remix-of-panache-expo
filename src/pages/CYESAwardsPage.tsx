@@ -57,7 +57,7 @@ const CYESAwardsPage = () => {
           <div className="flex flex-wrap justify-center gap-6 text-primary-foreground/80 text-sm">
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />
-              <span>Coming Soon 2026</span>
+              <span>July 16th 2026</span>
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4" />

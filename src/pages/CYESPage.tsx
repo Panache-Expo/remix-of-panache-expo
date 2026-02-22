@@ -12,27 +12,15 @@ import speaker4 from "@/assets/speaker4.jpeg";
 
 const speakers = [
   {
-    name: "Speaker Name",
-    role: "Entrepreneur & CEO",
-    topic: "Building Sustainable Businesses in Cameroon",
     image: speaker1
   },
   {
-    name: "Speaker Name",
-    role: "Tech Innovator",
-    topic: "Digital Transformation for Youth Entrepreneurs",
     image: speaker2
   },
   {
-    name: "Speaker Name",
-    role: "Investment Expert",
-    topic: "Securing Funding for Your Startup",
     image: speaker3
   },
   {
-    name: "Speaker Name",
-    role: "Business Mentor",
-    topic: "From Idea to Impact: Your Entrepreneurial Journey",
     image: speaker4
   }
 ];
@@ -87,15 +75,12 @@ const CYESPage = () => {
                 Register Now
               </Button>
             </Link>
-            <Button variant="outline" size="lg" className="bg-white/10 text-white border-white/20 hover:bg-white/20">
-              Learn More
-            </Button>
           </div>
 
           <div className="flex flex-wrap justify-center gap-6 text-primary-foreground/80 text-sm">
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />
-              <span>Coming Soon 2026</span>
+              <span>July 16th 2026</span>
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4" />

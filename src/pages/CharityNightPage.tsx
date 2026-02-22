@@ -40,7 +40,7 @@ const CharityNightPage = () => {
 
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pt-20">
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6">
-            CYES <span className="text-rose-gold">Charity Night</span>
+            Panache <span className="text-rose-gold">Charity Night</span>
           </h1>
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-4 font-light">
             An Evening of Elegance, Impact & Generosity
@@ -56,19 +56,12 @@ const CharityNightPage = () => {
                 Reserve Your Seat
               </Button>
             </Link>
-            <Button
-              variant="outline"
-              size="lg"
-              className="bg-white/10 text-primary-foreground border-primary-foreground/20 hover:bg-white/20"
-            >
-              Learn More
-            </Button>
           </div>
 
           <div className="flex flex-wrap justify-center gap-6 text-primary-foreground/80 text-sm">
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />
-              <span>Coming Soon 2026</span>
+              <span>July 16th 2026</span>
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4" />
