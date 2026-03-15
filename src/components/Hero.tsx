@@ -18,7 +18,7 @@ export const Hero = () => {
       </div>
       
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pt-20 md:pt-0">
         <img src={panacheLogo} alt="Panache Logo" className="w-44 h-44 md:w-56 md:h-56 object-cover mx-auto mb-6 rounded-full border-4 border-primary-foreground/30 shadow-elegant" />
         <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-6 animate-fade-in">
           Panache <span className="text-rose-gold">Expo</span>
