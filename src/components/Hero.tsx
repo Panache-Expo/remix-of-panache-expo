@@ -26,7 +26,7 @@ export const Hero = () => {
         {/* Event Date - prominent placement */}
         <div className="flex items-center justify-center gap-2 mb-8 animate-fade-in">
           <Calendar className="w-6 h-6 text-rose-gold" />
-          <span className="text-2xl md:text-3xl font-semibold text-primary-foreground">July 16th 2026</span>
+          <span className="text-2xl md:text-3xl font-semibold text-primary-foreground">July 16th - 18th 2026</span>
         </div>
         <p className="text-xl md:text-2xl lg:text-3xl text-primary-foreground/90 mb-6 font-light leading-relaxed animate-fade-in">
           Celebrating Beauty, Fashion and Skincare through 

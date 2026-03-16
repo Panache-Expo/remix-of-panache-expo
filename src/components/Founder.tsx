@@ -6,6 +6,7 @@ import ramiims from "@/assets/ramiims.jpg";
 import akwo from "@/assets/akwo.jpeg";
 import prince from "@/assets/prince.jpeg";
 import sharon from "@/assets/sharon.jpeg";
+import yannick from "@/assets/yannick.jpeg";
 
 const teamMembers = [
   {
@@ -37,6 +38,12 @@ const teamMembers = [
     title: "Event Planner",
     organization: "Panache Expo",
     photo: sharon,
+  },
+  {
+    name: "Tegueboug Yannick Cabrel",
+    title: "Graphic Designer",
+    organization: "Panache Expo",
+    photo: yannick,
   },
 ];
 

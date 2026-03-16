@@ -80,7 +80,7 @@ export const ContactPage = () => {
                   <span className="text-2xl">📍</span>
                 </div>
                 <h3 className="font-semibold text-primary-foreground mb-2">Visit Us</h3>
-                <p className="text-primary-foreground/80">Cameroon</p>
+                <p className="text-primary-foreground/80">Buea, Cameroon</p>
               </div>
             </div>
             

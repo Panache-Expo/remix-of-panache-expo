@@ -51,7 +51,7 @@ const CYESAwardsPage = () => {
 
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pt-20">
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-cyes-white mb-6">
-            CYESCD <span className="text-cyes-yellow">Awards</span>
+            CYECD <span className="text-cyes-yellow">Awards</span>
           </h1>
           <p className="text-xl md:text-2xl text-cyes-white/90 mb-4 font-light">
             Cameroon Youths Entrepreneurial & Community Development Awards 2026
@@ -81,7 +81,7 @@ const CYESAwardsPage = () => {
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4" />
-              <span>Cameroon</span>
+              <span>Chariot Hotel - Buea, Cameroon</span>
             </div>
           </div>
         </div>

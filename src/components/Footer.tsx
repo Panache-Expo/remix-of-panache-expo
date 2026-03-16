@@ -78,7 +78,7 @@ export const Footer = () => {
               </li>
               <li className="flex items-center text-sm text-primary-foreground/80">
                 <MapPin className="w-4 h-4 mr-3" />
-                  Cameroon
+                  Buea, Cameroon
               </li>
             </ul>
           </div>
@@ -156,7 +156,7 @@ export const Footer = () => {
         <div className="border-t border-primary-foreground/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-primary-foreground/60 text-sm">
-              © 2025 Panache Expo. All rights reserved.
+              © 2026 Panache Expo. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">
@@ -164,6 +164,9 @@ export const Footer = () => {
               </a>
               <a href="#" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">
                 Terms of Service
+              </a>
+              <a href="mailto:dhruvroshan@gmail.com" title="dhruvroshan@gmail.com" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">
+              Website by <span className="text-rose-gold font-medium">Dhruv Roshan</span>
               </a>
             </div>
           </div>

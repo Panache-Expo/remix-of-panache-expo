@@ -61,11 +61,11 @@ const FashionNightPage = () => {
           <div className="flex flex-wrap justify-center gap-6 text-primary-foreground/80 text-sm">
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />
-              <span>July 2026</span>
+              <span>July 18th 2026</span>
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4" />
-              <span>Cameroon</span>
+              <span>Chariot Hotel - Buea, Cameroon</span>
             </div>
           </div>
         </div>
