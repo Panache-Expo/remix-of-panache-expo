@@ -91,9 +91,9 @@ const FashionNightPage = () => {
               <div className="w-20 h-20 bg-gradient-primary rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-elegant group-hover:scale-110 transition-transform duration-300">
                 <Sparkles className="w-10 h-10 text-primary-foreground" />
               </div>
-              <h3 className="font-display text-2xl font-semibold text-primary mb-4">Glamour</h3>
+              <h3 className="font-display text-2xl font-semibold text-primary mb-4">Competitive Platform</h3>
               <p className="text-muted-foreground leading-relaxed">
-                An evening of high fashion, elegance, and unforgettable runway moments.
+                Selected designers present collections on a competitive runway before judges and industry professionals.
               </p>
             </div>
 
@@ -101,9 +101,9 @@ const FashionNightPage = () => {
               <div className="w-20 h-20 bg-gradient-secondary rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-rose group-hover:scale-110 transition-transform duration-300">
                 <Shirt className="w-10 h-10 text-primary-foreground" />
               </div>
-              <h3 className="font-display text-2xl font-semibold text-primary mb-4">Designers</h3>
+              <h3 className="font-display text-2xl font-semibold text-primary mb-4">Creative Showcase</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Showcasing both emerging talents and established designers from across Africa.
+                Professional runway presentations highlighting creativity, originality, and design philosophy.
               </p>
             </div>
 
@@ -111,9 +111,9 @@ const FashionNightPage = () => {
               <div className="w-20 h-20 bg-gradient-primary rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-elegant group-hover:scale-110 transition-transform duration-300">
                 <Star className="w-10 h-10 text-primary-foreground" />
               </div>
-              <h3 className="font-display text-2xl font-semibold text-primary mb-4">Excellence</h3>
+              <h3 className="font-display text-2xl font-semibold text-primary mb-4">Awards & Recognition</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Recognizing outstanding talent and innovation in the fashion industry.
+                Outstanding designers recognized for creativity, innovation, and craftsmanship excellence.
               </p>
             </div>
           </div>
