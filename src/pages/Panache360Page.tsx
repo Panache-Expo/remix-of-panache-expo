@@ -26,7 +26,7 @@ const Panache360Page = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/panache-360/register">
               <Button variant="default" size="lg">
-                Register for Workshops
+                Register for Competition
               </Button>
             </Link>
             <Link to="/panache-expo">
