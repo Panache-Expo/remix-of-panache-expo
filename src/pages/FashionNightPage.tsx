@@ -44,11 +44,10 @@ const FashionNightPage = () => {
             Panache <span className="text-rose-gold">Fashion Night</span>
           </h1>
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-4 font-light">
-            Where Style Meets Elegance on the Runway
+            A Competitive Runway Experience
           </p>
           <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            An electrifying night of fashion, creativity, and glamour showcasing the finest designers
-            and trends from Cameroon and beyond.
+            One of the most anticipated highlights of Panache Expo, celebrating creativity, innovation, and excellence within the fashion industry through a prestigious competitive runway.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
