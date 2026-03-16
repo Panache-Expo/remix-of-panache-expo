@@ -21,8 +21,7 @@ const Panache360Page = () => {
             Panache <span className="text-rose-gold">360</span> Beauty <span className="text-rose-gold">Competition</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            Comprehensive beauty education covering every aspect of the industry. 
-            From makeup to hair styling, nail art to skincare – master it all.
+            A flagship highlight of Panache Expo celebrating creativity, technical excellence, and innovation within the beauty industry. Compete on stage before a live audience and industry judges.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/panache-360/register">
