@@ -20,6 +20,8 @@ import { ContactPage } from "./pages/ContactPage";
 import { RegisterPage } from "./pages/RegisterPage";
 import PanacheDorPage from "./pages/PanacheDorPage";
 import PanacheNominationsPage from "./pages/PanacheNominationsPage";
+import MissPanachePage from "./pages/MissPanachePage";
+import MissPanacheRegisterPage from "./pages/MissPanacheRegisterPage";
 import NotFound from "./pages/NotFound";
 import DatabaseDiagnostic from "./components/DatabaseDiagnostic";
 
