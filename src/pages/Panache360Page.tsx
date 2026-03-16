@@ -38,19 +38,28 @@ const Panache360Page = () => {
         </div>
       </section>
 
-      {/* Features */}
+      {/* About Section */}
       <section className="py-16 px-6 bg-background">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-primary mb-6">
+              About the <span className="text-rose-gold">Competition</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              The Panache 360 Beauty Competition brings together talented professionals from different sectors of the beauty world to compete on one stage, showcasing their skills, creativity, and artistry before a live audience and a panel of industry judges.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
             <div className="text-center group">
               <div className="w-16 h-16 bg-gradient-primary rounded-2xl mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Sparkles className="w-8 h-8 text-primary-foreground" />
               </div>
               <h3 className="font-display text-xl font-semibold text-primary mb-2">
-                Expert Training
+                8 Categories
               </h3>
               <p className="text-muted-foreground text-sm">
-                Learn from industry professionals with years of experience
+                Compete in Barbing, Beauty Makeup, SFX Makeup, Braiding, Artistic Hairstyling, Wig Installation, Nail Installation, or Lash Installation
               </p>
             </div>
             
@@ -59,10 +68,10 @@ const Panache360Page = () => {
                 <Star className="w-8 h-8 text-primary-foreground" />
               </div>
               <h3 className="font-display text-xl font-semibold text-primary mb-2">
-                Certification
+                Over 2.4M FCFA
               </h3>
               <p className="text-muted-foreground text-sm">
-                Receive recognized certificates upon completion
+                Cash prizes, trophies, and industry recognition for winners
               </p>
             </div>
             
@@ -71,11 +80,41 @@ const Panache360Page = () => {
                 <Heart className="w-8 h-8 text-primary-foreground" />
               </div>
               <h3 className="font-display text-xl font-semibold text-primary mb-2">
-                Community
+                Grand Champion
               </h3>
               <p className="text-muted-foreground text-sm">
-                Join a supportive network of beauty professionals
+                Category champions compete for the ultimate Panache 360 Grand Champion title
               </p>
+            </div>
+          </div>
+
+          <div className="bg-gradient-card p-8 rounded-2xl">
+            <h3 className="font-display text-2xl font-bold text-primary mb-4 text-center">Competition Format</h3>
+            <div className="grid md:grid-cols-2 gap-6 text-muted-foreground">
+              <div>
+                <h4 className="font-semibold text-primary mb-2">Participation</h4>
+                <p className="text-sm leading-relaxed">
+                  Only 7 registered competitors selected per category. Perform live creative demonstrations before judges and audience.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-primary mb-2">Winners</h4>
+                <p className="text-sm leading-relaxed">
+                  Three winners per category: Category Champion, First Runner-Up, and Second Runner-Up receive cash prizes and trophies.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-primary mb-2">Judging Criteria</h4>
+                <p className="text-sm leading-relaxed">
+                  Technical Skill, Creativity & Originality, Clean Execution, Transformation & Impact, and Professional Presentation.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-primary mb-2">People's Choice</h4>
+                <p className="text-sm leading-relaxed">
+                  Public online voting determines the People's Choice Award winner, recognizing audience favorites.
+                </p>
+              </div>
             </div>
           </div>
         </div>

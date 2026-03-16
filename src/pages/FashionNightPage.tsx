@@ -10,23 +10,23 @@ import fashionNight from "@/assets/FashionNight.jpg";
 const highlights = [
   {
     icon: Shirt,
-    title: "Runway Shows",
-    description: "Witness stunning collections from top African and international designers",
+    title: "Limited Selection",
+    description: "Only selected designers chosen through application review for quality and exclusivity",
   },
   {
     icon: Scissors,
-    title: "Designer Showcases",
-    description: "Emerging and established designers presenting their latest creations",
+    title: "Professional Runway",
+    description: "Cohesive collections presented with professional models and styling",
   },
   {
     icon: Camera,
-    title: "Media & Press",
-    description: "Full media coverage with professional photography and live streaming",
+    title: "Media Exposure",
+    description: "Full media coverage providing valuable brand visibility and recognition",
   },
   {
     icon: Star,
-    title: "Fashion Awards",
-    description: "Recognizing excellence in design, styling, and fashion innovation",
+    title: "Industry Networking",
+    description: "Connect with designers, stylists, photographers, and fashion professionals",
   },
 ];
 
