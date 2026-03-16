@@ -146,6 +146,9 @@ export const Header = () => {
                 <Link to="/panache-dor" className="block text-foreground hover:text-primary transition-colors py-1 pl-2" onClick={() => setIsMobileMenuOpen(false)}>
                   Panache D'or Winners
                 </Link>
+                <Link to="/miss-panache" className="block text-foreground hover:text-primary transition-colors py-1 pl-2" onClick={() => setIsMobileMenuOpen(false)}>
+                  Miss Panache Expo
+                </Link>
                 <Link to="/panache-expo/nominations" className="block text-foreground hover:text-primary transition-colors py-1 pl-2" onClick={() => setIsMobileMenuOpen(false)}>
                   Nominations
                 </Link>
