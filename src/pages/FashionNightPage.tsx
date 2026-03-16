@@ -10,23 +10,23 @@ import fashionNight from "@/assets/FashionNight.jpg";
 const highlights = [
   {
     icon: Shirt,
-    title: "Runway Shows",
-    description: "Witness stunning collections from top African and international designers",
+    title: "Limited Selection",
+    description: "Only selected designers chosen through application review for quality and exclusivity",
   },
   {
     icon: Scissors,
-    title: "Designer Showcases",
-    description: "Emerging and established designers presenting their latest creations",
+    title: "Professional Runway",
+    description: "Cohesive collections presented with professional models and styling",
   },
   {
     icon: Camera,
-    title: "Media & Press",
-    description: "Full media coverage with professional photography and live streaming",
+    title: "Media Exposure",
+    description: "Full media coverage providing valuable brand visibility and recognition",
   },
   {
     icon: Star,
-    title: "Fashion Awards",
-    description: "Recognizing excellence in design, styling, and fashion innovation",
+    title: "Industry Networking",
+    description: "Connect with designers, stylists, photographers, and fashion professionals",
   },
 ];
 
@@ -44,11 +44,10 @@ const FashionNightPage = () => {
             Panache <span className="text-rose-gold">Fashion Night</span>
           </h1>
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-4 font-light">
-            Where Style Meets Elegance on the Runway
+            A Competitive Runway Experience
           </p>
           <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            An electrifying night of fashion, creativity, and glamour showcasing the finest designers
-            and trends from Cameroon and beyond.
+            One of the most anticipated highlights of Panache Expo, celebrating creativity, innovation, and excellence within the fashion industry through a prestigious competitive runway.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -83,9 +82,7 @@ const FashionNightPage = () => {
               About <span className="text-rose-gold">Fashion Night</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Panache Fashion Night is a premier fashion event that celebrates African creativity and
-              style. From breathtaking runway shows to exclusive designer showcases, this is the
-              ultimate evening for fashion lovers, industry professionals, and trendsetters.
+              Panache Fashion Night brings together talented fashion designers, models, stylists, and fashion enthusiasts for an unforgettable evening of creativity, style, and artistic expression. Selected designers present their collections on a competitive runway before a live audience, industry professionals, and media.
             </p>
           </div>
 
@@ -94,9 +91,9 @@ const FashionNightPage = () => {
               <div className="w-20 h-20 bg-gradient-primary rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-elegant group-hover:scale-110 transition-transform duration-300">
                 <Sparkles className="w-10 h-10 text-primary-foreground" />
               </div>
-              <h3 className="font-display text-2xl font-semibold text-primary mb-4">Glamour</h3>
+              <h3 className="font-display text-2xl font-semibold text-primary mb-4">Competitive Platform</h3>
               <p className="text-muted-foreground leading-relaxed">
-                An evening of high fashion, elegance, and unforgettable runway moments.
+                Selected designers present collections on a competitive runway before judges and industry professionals.
               </p>
             </div>
 
@@ -104,9 +101,9 @@ const FashionNightPage = () => {
               <div className="w-20 h-20 bg-gradient-secondary rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-rose group-hover:scale-110 transition-transform duration-300">
                 <Shirt className="w-10 h-10 text-primary-foreground" />
               </div>
-              <h3 className="font-display text-2xl font-semibold text-primary mb-4">Designers</h3>
+              <h3 className="font-display text-2xl font-semibold text-primary mb-4">Creative Showcase</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Showcasing both emerging talents and established designers from across Africa.
+                Professional runway presentations highlighting creativity, originality, and design philosophy.
               </p>
             </div>
 
@@ -114,9 +111,9 @@ const FashionNightPage = () => {
               <div className="w-20 h-20 bg-gradient-primary rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-elegant group-hover:scale-110 transition-transform duration-300">
                 <Star className="w-10 h-10 text-primary-foreground" />
               </div>
-              <h3 className="font-display text-2xl font-semibold text-primary mb-4">Excellence</h3>
+              <h3 className="font-display text-2xl font-semibold text-primary mb-4">Awards & Recognition</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Recognizing outstanding talent and innovation in the fashion industry.
+                Outstanding designers recognized for creativity, innovation, and craftsmanship excellence.
               </p>
             </div>
           </div>
