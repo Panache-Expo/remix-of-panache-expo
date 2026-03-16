@@ -15,6 +15,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Sparkles } from "lucide-react";
+import PanacheAwards from "@/assets/PanacheAwards.jpeg";
 
 const PANACHE_EMAIL = "thepanacheexpo@gmail.com";
 
@@ -91,15 +92,26 @@ const PanacheNominationsPage = () => {
       <Header />
 
       {/* Hero */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-primary/20 to-secondary/20">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <section
+        className="pt-24 pb-16 relative min-h-[600px]"
+        style={{
+          backgroundImage: `url(${PanacheAwards})`,
+          backgroundSize: "contain",
+          backgroundPosition: "center",
+          backgroundRepeat: "repeat",
+          backgroundColor: "#1a1100",
+        }}
+      >
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(20, 10, 0, 0.45)", mixBlendMode: "multiply" }} />
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(180, 130, 0, 0.18)" }} />
+        <div className="relative max-w-4xl mx-auto px-6 text-center">
           <div className="w-16 h-16 bg-gradient-primary rounded-2xl mx-auto mb-6 flex items-center justify-center">
             <Sparkles className="w-8 h-8 text-primary-foreground" />
           </div>
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-primary mb-4">
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
             Panache D'or <span className="text-rose-gold">Nominations</span>
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-white/80 max-w-2xl mx-auto">
             Panache D'or 2026 — Nominate an outstanding beauty or fashion professional.
             Achievements must fall within the last 24 months.
           </p>
