@@ -16,6 +16,7 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Sparkles } from "lucide-react";
 import PanacheAwards from "@/assets/PanacheAwards.jpeg";
+import { MapPin, Calendar} from "lucide-react";
 
 const PANACHE_EMAIL = "thepanacheexpo@gmail.com";
 
@@ -104,7 +105,7 @@ const PanacheNominationsPage = () => {
       >
         <div className="absolute inset-0" style={{ backgroundColor: "rgba(20, 10, 0, 0.45)", mixBlendMode: "multiply" }} />
         <div className="absolute inset-0" style={{ backgroundColor: "rgba(180, 130, 0, 0.18)" }} />
-        <div className="relative max-w-4xl mx-auto px-6 text-center">
+        <div className="relative max-w-4xl mx-auto px-6 text-center flex flex-col items-center justify-center min-h-[400px]">
           <div className="w-16 h-16 bg-gradient-primary rounded-2xl mx-auto mb-6 flex items-center justify-center">
             <Sparkles className="w-8 h-8 text-primary-foreground" />
           </div>
@@ -115,6 +116,12 @@ const PanacheNominationsPage = () => {
             Panache D'or 2026 — Nominate an outstanding beauty or fashion professional.
             Achievements must fall within the last 24 months.
           </p>
+          <div className="flex items-center justify-center gap-2 mt-4 text-white/70 text-base">
+            <Calendar className="w-5 h-5 text-rose-gold" />
+            <span>18th July 2026</span>
+            <MapPin className="w-5 h-5 text-rose-gold" />
+            <span className="text-base font-medium">Chariot Hotel, Buea, Cameroon</span>
+          </div>
         </div>
       </section>
 

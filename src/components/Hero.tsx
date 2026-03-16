@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-beauty.png";
 import { Link } from "react-router-dom";
-import { Calendar } from "lucide-react";
+import { Calendar, MapPin } from "lucide-react";
 import panacheLogo from "@/assets/PanacheExpoLogo.png";
 
 export const Hero = () => {
@@ -28,6 +28,11 @@ export const Hero = () => {
           <Calendar className="w-6 h-6 text-rose-gold" />
           <span className="text-2xl md:text-3xl font-semibold text-primary-foreground">July 16th - 18th 2026</span>
         </div>
+        <div className="flex items-center justify-center gap-2 mb-8 animate-fade-in">
+          <MapPin className="w-6 h-6 text-rose-gold" />
+          <span className="text-2xl md:text-3xl font-semibold text-primary-foreground">Chariot Hotel - Buea, Cameroon</span>
+        </div>
+
         <p className="text-xl md:text-2xl lg:text-3xl text-primary-foreground/90 mb-6 font-light leading-relaxed animate-fade-in">
           Celebrating Beauty, Fashion and Skincare through 
         </p>

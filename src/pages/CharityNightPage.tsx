@@ -66,7 +66,7 @@ const CharityNightPage = () => {
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4" />
-              <span>Cameroon</span>
+              <span>Chariot Hotel - Buea, Cameroon</span>
             </div>
           </div>
         </div>
