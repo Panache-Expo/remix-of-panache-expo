@@ -7,6 +7,7 @@ import akwo from "@/assets/akwo.jpeg";
 import prince from "@/assets/prince.jpeg";
 import sharon from "@/assets/sharon.jpeg";
 import yannick from "@/assets/yannick.jpeg";
+import victor from "@/assets/victor.jpeg";
 
 const teamMembers = [
   {
@@ -44,6 +45,12 @@ const teamMembers = [
     title: "Graphic Designer",
     organization: "Panache Expo",
     photo: yannick,
+  },
+  {
+    name: "Mafany Victor Ngando",
+    title: "Legal Advisor",
+    organization: "Panache Expo",
+    photo: victor,
   },
 ];
 
