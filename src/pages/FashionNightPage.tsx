@@ -162,7 +162,7 @@ const FashionNightPage = () => {
         </div>
       </section>
 
-      <Sponsors variant="panache" />
+      <SponsorsMarquee />
       <Footer />
     </div>
   );

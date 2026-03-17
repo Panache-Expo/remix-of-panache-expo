@@ -201,7 +201,7 @@ const CYESPage = () => {
         </div>
       </section>
 
-      <Sponsors variant="cyes" />
+      <SponsorsMarquee />
       <Footer />
     </div>
   );
