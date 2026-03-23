@@ -84,7 +84,7 @@ export const Header = () => {
               <DropdownMenuContent className="bg-background border border-border shadow-elegant z-50">
                 <DropdownMenuItem asChild>
                   <Link to="/cyes/awards" className="cursor-pointer">
-                    CYESCD Awards
+                    CYECD Awards
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>

@@ -16,9 +16,41 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Sparkles } from "lucide-react";
 import PanacheAwards from "@/assets/PanacheAwards.jpeg";
-import { MapPin, Calendar} from "lucide-react";
+import { MapPin, Calendar, User } from "lucide-react";
+import victor from "@/assets/victor.png";
+import nkafu from "@/assets/nkafu.png";
+import prince from "@/assets/prince.jpeg";
+import florence from "@/assets/florence.jpeg";
+import Joan from "@/assets/joan.jpeg";
 
 const PANACHE_EMAIL = "thepanacheexpo@gmail.com";
+const juryMembers = [
+  {
+    name: "Barr. Mafany Victor (Kinsman) Ngando",
+    title: "Legal Advisor",
+    photo: victor,
+  },
+  {
+    name: "Nkafu Atemnkeng Sulet",
+    title: "Chief Creative Director, Sulet Noir",
+    photo: nkafu,
+  },
+  {
+    name: "Prince Enobi Mykel",
+    title: "Director / Chief Judge",
+    photo: prince,
+  },
+  {
+    name: "Florence Tubuoh Nabi",
+    title: "Judge",
+    photo: florence,
+  },
+  {
+    name: "Joan Ngomba",
+    title: "Judge",
+    photo: Joan,
+  },
+];
 
 const categories = [
   { value: "Barber of the Year", description: "Must demonstrate consistent professional barbering excellence, client base growth, technical skill, and visible industry impact." },
@@ -255,6 +287,44 @@ const PanacheNominationsPage = () => {
             </form>
           </CardContent>
         </Card>
+      </section>
+      <section className="py-24 px-6 bg-muted/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-rose-gold font-medium text-lg">Panache Expo 2026</span>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mt-2 mb-4">
+              Meet the <span className="text-rose-gold">Jury Committee</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Our distinguished panel of judges brings expertise, integrity, and passion to evaluating Cameroon's brightest young entrepreneurs.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {juryMembers.map((member) => (
+              <div
+                key={member.name}
+                className="flex flex-col items-center text-center p-6 rounded-2xl bg-background shadow-lg border border-border/40 hover:shadow-xl transition-shadow"
+              >
+                <div className="w-24 h-24 rounded-full overflow-hidden mb-4 bg-muted flex items-center justify-center border-2 border-rose-gold/30">
+                  {member.photo ? (
+                    <img
+                      src={member.photo}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <User className="w-12 h-12 text-muted-foreground/40" />
+                  )}
+                </div>
+                <h3 className="font-display text-base font-bold text-foreground mb-1">
+                  {member.name}
+                </h3>
+                <p className="text-rose-gold font-medium text-xs mb-1">{member.title}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       <Footer />

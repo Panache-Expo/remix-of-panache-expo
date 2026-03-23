@@ -10,7 +10,15 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import { Award } from "lucide-react";
+import { Award, User } from "lucide-react";
+import honDonald from "@/assets/HonDonald.jpeg";
+import nshala from "@/assets/Nshala.jpeg";
+import felix from "@/assets/felix.jpg";
+import nervis from "@/assets/nervis.png";
+import chuo from "@/assets/chuo.png";
+import steve from "@/assets/stevenjang.png";
+import angwi from "@/assets/angwi.png";
+import nanalynn from "@/assets/nanalynn.png";
 
 const CYES_EMAIL = "info.cyescyecdawards@gmail.com";
 
@@ -43,6 +51,48 @@ const honoraryCategories = [
   { value: "Entrepreneurial Legacy Award", description: "Visionary business leader whose long-term work has shaped industries and inspired future generations." },
   { value: "Youth Champion Award", description: "Individual or institution consistently supporting and advancing youth empowerment initiatives." },
   { value: "Presidential Honor Award", description: "Special recognition presented by the Founder to an exceptional personality for outstanding service and strategic impact." },
+];
+const juryMembers = [
+  {
+    name: "Hon Donald Malomba Esembe",
+    title: "MP Buea Urban Constituency",
+    photo: honDonald,
+  },
+  {
+    name: "Mr Nshal Mpeng Abwa Bernard Takang",
+    title: "Regional President Cameroon National Youth Council Southwest",
+    photo: nshala,
+  },
+  {
+    name: "Felix Fomengia",
+    title: "Digital Innovation Expert and Cybersecurity Professional",
+    photo: felix,
+  },
+  {
+    name: "Nzometiah Nervis",
+    title: "CEO, Nervtek",
+    photo: nervis,
+  },
+  {
+    name: "Barr. Chuo Angabua ",
+    title: "Founding Partner | Prime Time Law offices",
+    photo: chuo,
+  },
+  {
+    name: "Steve Njang",
+    title: "Founder of Nexdim Empire, Award-winning Blogger/ Content creator",
+    photo: steve,
+  },
+  {
+    name: "Angwi Njamah",
+    title: "Journalist /Public Relations Officer PCC Business Units/Certified Virtual Assistant",
+    photo: angwi,
+  },
+  {
+    name: "Miss Nana Lynn ",
+    title: "LinkedIn & Personal Brand Coach",
+    photo: nanalynn,
+  },
 ];
 
 const allCategories = [...competitiveCategories, ...honoraryCategories];
@@ -165,6 +215,45 @@ const CYESNominationsPage = () => {
             </form>
           </CardContent>
         </Card>
+      </section>
+      {/* Jury Committee Section */}
+      <section className="py-24 px-6 bg-cyes-green/5">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-cyes-green font-medium text-lg">CYECD Awards 2026</span>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mt-2 mb-4">
+              Meet the <span className="text-cyes-green">Jury Committee</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Our distinguished panel of judges brings expertise, integrity, and passion to evaluating Cameroon's brightest young entrepreneurs.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {juryMembers.map((member) => (
+              <div
+                key={member.name}
+                className="flex flex-col items-center text-center p-6 rounded-2xl bg-background shadow-lg border border-border/40 hover:shadow-xl transition-shadow"
+              >
+                <div className="w-28 h-28 rounded-full overflow-hidden mb-4 bg-muted flex items-center justify-center border-2 border-cyes-green/30">
+                  {member.photo ? (
+                    <img
+                      src={member.photo}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <User className="w-12 h-12 text-muted-foreground/40" />
+                  )}
+                </div>
+                <h3 className="font-display text-xl font-bold text-foreground mb-1">
+                  {member.name}
+                </h3>
+                <p className="text-cyes-green font-medium text-sm mb-1">{member.title}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       <Footer />
